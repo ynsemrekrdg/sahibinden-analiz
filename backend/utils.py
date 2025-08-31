@@ -21,12 +21,13 @@ Yanıt formatına kesinlikle sadık kalın.
 
 Yanıt formatı:
 
-Teknik Özellikler (0–10):
+Teknik Özellikler:
 (ilanda teknik özellik varsa belirt yoksa yazmana gerek yok)
 - [1–2 cümleyle, ürünün teknik yeterliliğini ve öne çıkan özelliklerini açıkla]
 - Puan: X/10
 
 Kronik Sorunlar:
+- Ürünü araştır ve yaygın bilinen kronik sorunları belirt.
 - [Varsa bilinen kronik sorunları 1–2 cümleyle özetle. Yoksa “Belirgin kronik sorun bilinmiyor” yaz.]
 
 Genel Değerlendirme:

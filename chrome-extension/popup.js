@@ -8,9 +8,7 @@ document.getElementById("analizBtn").addEventListener("click", async () => {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
       func: () => {
-        const infoList = Array.from(document.querySelectorAll(".classifiedInfoList li"))
-          .map(li => li.innerText.trim())
-          .join("\n");
+        const infoList = document.querySelector(".classifiedInfo")?.innerText.trim() || "İlan bilgisi alınamadı";
 
         const aciklama = document.getElementById("classifiedDescription")?.innerText.trim() || "";
         const metin = `İlan Bilgileri:\n${infoList}\n\nAçıklama:\n${aciklama}`;
