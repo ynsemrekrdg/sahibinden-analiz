@@ -13,21 +13,32 @@ async def generate_evaluation(data):
         return {"puan": 0, "yorum": "API anahtarı eksik."}
 
     prompt = f"""
-Aşağıda sahibinden.com’dan satılan bir ilana ait bilgiler yer almaktadır. Lütfen bu bilgileri **ürün açıklaması ve özellikleri üzerinden** değerlendiriniz. 
+Aşağıda sahibinden.com’dan alınmış bir ilan metni bulunmaktadır. 
+Lütfen kendinizi bir ürün inceleme uzmanı olarak düşünün ve ilanı 
+aşağıdaki kriterlere göre **tarafsız, bilgilendirici ve mümkün olduğunca somut** şekilde değerlendirin. 
+Amacınız ürünü övmek veya kötülemek değil, alıcıya mantıklı bir fikir sunmaktır. 
+Yanıt formatına kesinlikle sadık kalın.
 
-**ÖNEMLİ:** İlan tarihleriyle ilgili hiçbir yorum yapmayın. Tarihleri dikkate almayın.
+Yanıt formatı:
 
-Değerlendirme sırasında odaklanmanız gereken kriterler:
-- Ürünün açıklığı ve yeterliliği
-- Ürün bilgileri ve teknik özelliklerin tutarlılığı
-- Ürünün gerçekçiliğe uygunluğu ve güvenilirliği
+Teknik Özellikler (0–10):
+(ilanda teknik özellik varsa belirt yoksa yazmana gerek yok)
+- [1–2 cümleyle, ürünün teknik yeterliliğini ve öne çıkan özelliklerini açıkla]
+- Puan: X/10
 
-Bu değerlendirme sonucunda 0–100 arasında bir puan verin. Ardından kullanıcıların dikkat etmesi gereken noktaları maddeler halinde sıralayın. Son olarak 1-2 cümlelik kısa bir genel değerlendirme yapın.
+Kronik Sorunlar:
+- [Varsa bilinen kronik sorunları 1–2 cümleyle özetle. Yoksa “Belirgin kronik sorun bilinmiyor” yaz.]
 
-Puanı açıkça belirtin: Örneğin "Puan: 78/100"
+Genel Değerlendirme:
+- [2–4 cümlelik kısa ama anlamlı yorum; fiyat/performans, ilan açıklığının yeterliliği ve alıcı için dikkat edilmesi gereken noktaları vurgula]
+- Puan: XX/100
 
+İlan Metni:
 {data['metin']}
 """
+
+
+
 
 
 

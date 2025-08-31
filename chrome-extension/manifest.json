@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "İlanları yapay zeka ile analiz et",
   "permissions": ["scripting", "activeTab"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["<sahibinden.com>"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
